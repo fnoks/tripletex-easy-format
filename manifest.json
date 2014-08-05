@@ -1,8 +1,8 @@
 {
   "name": "Tripletex easy format",
-  "version": "1.0",
-  "description": "Tripletex easy format",
-   "content_scripts": [
+  "version": "0.0.2",
+  "description": "This chrome extension makes is possible to add time tracking entries in the HH:MM format on tripletex.no",
+  "content_scripts": [
     {
       "matches": ["https://tripletex.no/*"],
       "js": ["tripletex-easy-format.js"]
