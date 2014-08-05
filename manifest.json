@@ -1,0 +1,12 @@
+{
+  "name": "Tripletex easy format",
+  "version": "1.0",
+  "description": "Tripletex easy format",
+   "content_scripts": [
+    {
+      "matches": ["https://tripletex.no/*"],
+      "js": ["tripletex-easy-format.js"]
+    }
+  ],
+  "manifest_version": 2
+}
