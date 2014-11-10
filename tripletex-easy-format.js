@@ -1,9 +1,7 @@
-var frame = document.getElementsByName('content')[0];
+var doc = window.document;
 
-// Wait until the frame(!) is loaded
-frame.onload = function () {
-  var doc = frame.contentDocument || frame.contentWindow.document;
-  var inputs = doc.getElementsByTagName('input');
+function setup(container) {
+  var inputs = container.getElementsByTagName('input');
   var arr = Array.prototype.slice.call(inputs);
 
   for (var i=0; i<arr.length; i++) {
@@ -28,4 +26,14 @@ frame.onload = function () {
       }, true);
     }
   }
-};
+}
+
+var interval = setInterval(function () {
+  var container = doc.getElementById('ajaxContentDataForm'); 
+  if (container) {
+    clearInterval(interval);
+    setup(container);
+  }
+}, 50);
+
+
